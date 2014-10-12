@@ -42,8 +42,8 @@ def commentedaddr_key(commented_addr=DEFAULT_COMMENTED_ADDRESS):
 
 class Greeting(ndb.Model):
 	author = ndb.UserProperty()
-	address = ndb.CategoryProperty()
-	content = ndb.StringProperty(indexed=False)
+	address = ndb.StringProperty()
+	content = ndb.TextProperty()
 	date = ndb.DateTimeProperty(auto_now_add=True)
 
 
